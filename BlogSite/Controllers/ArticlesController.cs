@@ -9,5 +9,10 @@ namespace BlogSite.Controllers
         {
             return View();
         }
+
+        public IActionResult Deneme()
+        {
+            return View();
+        }
     }
 }
