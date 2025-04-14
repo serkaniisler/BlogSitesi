@@ -14,7 +14,7 @@ namespace BlogSite.Controllers
         {
             return View();
         }
-        public IActionResult sekoKasar()
+        public IActionResult TopYusuf()
         {
             return View();
         }
