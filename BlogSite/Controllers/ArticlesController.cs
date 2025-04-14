@@ -10,7 +10,7 @@ namespace BlogSite.Controllers
             return View();
         }
 
-        public IActionResult Denemeeee()
+        public IActionResult Deneme()
         {
             return View();
         }
