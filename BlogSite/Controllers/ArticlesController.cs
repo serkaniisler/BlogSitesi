@@ -4,7 +4,8 @@ namespace BlogSite.Controllers
 {
     public class ArticlesController : Controller
     {
-        public IActionResult Index()
+
+        public IActionResult Main()
         {
             return View();
         }

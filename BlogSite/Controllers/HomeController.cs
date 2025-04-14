@@ -18,6 +18,11 @@ namespace BlogSite.Controllers
             return View();
         }
 
+        public IActionResult asd()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
