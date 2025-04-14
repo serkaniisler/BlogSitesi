@@ -14,7 +14,7 @@ namespace BlogSite.Controllers
         {
             return View();
         }
-        public IActionResult sekoKaşar()
+        public IActionResult sekoKasar()
         {
             return View();
         }
