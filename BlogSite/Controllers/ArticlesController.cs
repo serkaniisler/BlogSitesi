@@ -14,5 +14,9 @@ namespace BlogSite.Controllers
         {
             return View();
         }
+        public IActionResult sekoKaşar()
+        {
+            return View();
+        }
     }
 }
