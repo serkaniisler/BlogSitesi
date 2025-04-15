@@ -3,77 +3,111 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<html>
+<style>
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-<head>
+    .card-dark {
+        background-color: #1e1e1e;
+        border: 1px solid #2e2e2e;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main Blog</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        .card-dark:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 255, 255, 0.2);
+        }
 
-    <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    .card-title {
+        color: #00ffff;
+    }
 
-    <!-- Custom Fonts -->
-    @* <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> *@
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    .card-subtitle {
+        color: #cccccc;
+    }
 
-</head>
+    .post-meta a {
+        color: #1e90ff;
+        text-decoration: none;
+    }
 
-<body>
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+    .btn-outline-secondary {
+        color: #00ffff;
+        border-color: #00ffff;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #00ffff;
+            color: #121212;
+        }
+
+    /* Footer düzeltmesi */
+    footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+        footer a {
+            color: #00ffff !important;
+        }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+</style>
+
+
+<div class="container-fluid px-5 py-4">
+    @* Geniş container için container-fluid ve px-5 eklendi *@
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-10 col-md-11">
+            @* Genişletilmiş kolon *@
+
+            @* Post Cards *@
+            @{
+                var posts = new[]
+                {
+            new { Title = "Man must explore, and this is exploration at its greatest", Subtitle = "Problems look mighty small from 150 miles up", Date = "September 24, 2014" },
+            new { Title = "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.", Subtitle = "", Date = "September 18, 2014" },
+            new { Title = "Science has not yet mastered prophecy", Subtitle = "We predict too much for the next year and yet far too little for the next ten.", Date = "August 24, 2014" },
+            new { Title = "Failure is not an option", Subtitle = "Many say exploration is part of our destiny, but it’s actually our duty to future generations.", Date = "July 8, 2014" }
+            };
+            }
+            @foreach (var post in posts)
+            {
+                <div class="card card-dark mb-4 p-4">
+                    <a href="post.html" class="text-decoration-none">
+                        <h4 class="card-title">@post.Title</h4>
+                        @if (!string.IsNullOrEmpty(post.Subtitle))
+                        {
+                            <h6 class="card-subtitle mb-2">@post.Subtitle</h6>
+                        }
+                    </a>
+                    <p class="post-meta mt-3">Posted by <a href="#">Start Bootstrap</a> on @post.Date</p>
                 </div>
-            </div>
+            }
+
+            <!-- Pager -->
+            <nav class="d-flex justify-content-end mt-4">
+                <a href="#" class="btn btn-outline-secondary">Older Posts &rarr;</a>
+            </nav>
+
         </div>
-    </footer>
+    </div>
+</div>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-
-</body>
-
-</html>
-
+<!-- Scripts -->
+<script src="~/Articles/vendor/jquery/jquery.min.js"></script>
+<script src="~/Articles/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Articles/js/jqBootstrapValidation.js"></script>
+<script src="~/Articles/js/contact_me.js"></script>
+<script src="~/Articles/js/clean-blog.min.js"></script>
