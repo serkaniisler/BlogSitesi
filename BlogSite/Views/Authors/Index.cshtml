@@ -1,8 +1,85 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="sidebar">
+    <div class="profile-header">
+        <!-- Yeni eklenen container -->
+        <img src="~/HomePage/images/file.jpg" alt="Profile" class="profile-img" />
+        <h4>Serkan İşler</h4> <!-- h2 yerine h4 -->
+    </div>
+  
+    <b>Merhaba, benim adım Serkan İşler. Bilgisayar mühendisiyim ve özellikle ASP.NET Core, C# ve SQL teknolojilerinde uzmanlaşmış bir yazılım geliştiriciyim. </b><br /><a href="#">Hakkımda daha fazla bilgi için Tıklayın</a>
+    <div class="social-icons">
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-github"></i>
+        <i class="fa fa-codepen"></i>
+    </div>
+    <ul class="nav-links">
+        <li><i class="fa fa-home"></i> Blog Anasayfa</li>
+        <li><i class="fa fa-file-text"></i> Blog Gönderilerim</li>
+        <li><i class="fa fa-user"></i> Hakkımda</li>
+    </ul>
+    <button class="btn-contact">iletişime geçin</button>
+</div>
+<div class="main-content">
+    <h1 style="text-align:center">Serkan İşler - Blog Gönderileri</h1>
+    <p>Bloğuma hoş geldiniz. Abone olun ve en son blog yazılarımı gelen kutunuza alın.</p>
+    <div class="subscribe">
+        <input type="email" placeholder="Email" />
+        <button>Katıl</button>
+    </div>
 
+    <div class="post">
+        <img src="~/Images/linuxlogoo.png" />
+        <div>
+            <h2>C# Artık Yalnızca Windows'a Özgü Değil: Linux'ta .NET Core'un Gücü</h2>
+            <p class="meta">2 gün önce yayınlandı • 5 dakikalık okuma • 8 yorum</p>
+            <p>Microsoft'un açık kaynak hamlesiyle .NET Core, Linux ortamlarında native olarak çalışabiliyor. Docker container'ları içinde C# ile mikroservis geliştirmek veya Raspberry Pi üzerinde IoT uygulamaları çalıştırmak artık mümkün. Örneğin, Red Hat Enterprise Linux'ta ASP.NET Core performansı Windows'tan %15 daha yüksek olabiliyor.</p>
+            <a href="#">Read more →</a>
+        </div>
+    </div>
+
+    <div class="post">
+        <img src="~/Images/Csharp_logo.png" />
+        <div>
+            <h2>Modern Web Uygulamaları İçin C# ve ASP.NET Core'un Gücü</h2>
+            <p class="meta">15 gün önce yayınlandı • 3 dakikalık okuma • 26 yorum</p>
+            <p>C# ve ASP.NET Core, performans odaklı web API'lerinden MVC tabanlı kurumsal çözümlere kadar geniş bir yelpazede, Docker desteği ve mikroservis mimarileriyle cloud-native uygulamalar geliştirmenin en verimli yoludur. Middleware yapısı ve dependency injection ile modüler projeler inşa edebilirsiniz.</p>
+            <a href="#">Read more →</a>
+        </div>
+    </div>
+
+    <div class="post">
+        <img src="~/Images/Python-logo-notext.svg.png" />
+        <div>
+            <h2>C# mı Python mı? Performans ve Üretkenlik Dengesi</h2>
+            <p class="meta">19 gün önce yayınlandı • 8 dakikalık okuma • 12 yorum</p>
+            <p>Python'un aksine C#, statik typing ve JIT derleme sayesinde 10 kat daha hızlı çalışabilir. ML.NET ile makine öğrenimi veya IronPython entegrasyonuyla Python'un esnekliğini C#'ın performansıyla birleştirebilirsiniz.</p>
+            <a href="#">Read more →</a>
+        </div>
+    </div>
+    <div class="post">
+        <img src="~/Images/unity.png" />
+        <div>
+            <h2>C# ile Unity'de %40 Daha Hızlı Oyun Kodu</h2>
+            <p class="meta">1 ay önce yayınlandı • 8 dakikalık okuma • 12 yorum</p>
+            <p>Python'un aksine C#, statik typing ve JIT derleme sayesinde 10 kat daha hızlı çalışabilir. ML.NET ile makine öğrenimi veya IronPython entegrasyonuyla Python'un esnekliğini C#'ın performansıyla birleştirebilirsiniz.</p>
+            <a href="#">Read more →</a>
+        </div>
+    </div>
+    <div class="post">
+        <img src="~/Images/dockerLogo.jpeg" />
+        <div>
+            <h2>Docker Olmadan Modern Yazılım Geliştirmek Artık Mümkün Değil</h2>
+            <p class="meta">2 ay önce yayınlandı • 8 dakikalık okuma • 12 yorum</p>
+            <p>Docker, uygulamalarınızı 'bir kere build et, her yerde çalıştır' mantığıyla paketlemenizi sağlar. Geliştirme, test ve production ortamlarınızı tamamen izole ederek 'bende çalışıyordu' sorununu ortadan kaldırır.</p>
+            <a href="#">Read more →</a>
+        </div>
+    </div>
+    <button class="nextButton">
+        Sonraki <span class="icon fas fa-arrow-right"></span>
+    </button>
+</div>
